@@ -48,17 +48,22 @@ public class PruebaJugadores {
         System.out.println("Datos de jugadores con arma");
         System.out.println(player[0]);
         System.out.println(player[1]);
-        do{
+        while (player[0].getHp() > 0 && player[1].getHp() > 0){
+           if(player[0].getHp()>0){
             System.out.println(player[0]);
             System.out.println(player[1]);
             System.out.println("Jugador 1 ataca");
             player[0].ataques(player[1]);
-           
+           } 
+           if(player[1].getHp()>0){
             System.out.println(player[0]);
             System.out.println(player[1]);
             System.out.println("Jugador 2 ataca");
             player[1].ataques(player[0]);
-        }while (player[0].getHp() > 0 && player[1].getHp() > 0);
+           }
+           
+          
+        }
 
     }
 }
